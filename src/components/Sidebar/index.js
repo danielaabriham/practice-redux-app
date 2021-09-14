@@ -1,10 +1,17 @@
-import React from 'react'
-import './style.css'
+import React from "react";
+import "./style.css";
 
-const Sidebar = () => {
-    return (
-        <aside className="sidebar">Sidebar</aside>
-    )
-}
+import User from '../../containers/User'
 
-export default Sidebar
+const Sidebar = ({ contacts }) => {
+  
+  return (
+    <aside className="sidebar">
+      {contacts.map(contact => <User key={contact.user_id} user={contact} />)}
+    </aside>
+  );
+};
+
+
+
+export default Sidebar;

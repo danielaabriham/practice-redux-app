@@ -1,7 +1,6 @@
 import { createStore } from "redux";
-import reducer from '../reducer'
-import { contacts } from "../data";
+import data from '../reducer'
 
-const store = createStore(reducer, {contacts})
+const store = createStore(data)
 
 export default store
